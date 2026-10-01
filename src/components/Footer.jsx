@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className="site-footer" id="contact">
+    <footer className="site-footer">
       <div className="footer-inner">
         <div className="footer-main">
           <a className="footer-brand" href="#home">

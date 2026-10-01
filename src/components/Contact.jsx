@@ -20,7 +20,6 @@ function Contact() {
       message,
       submittedAt: new Date().toISOString(),
     }
-    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`
 
     let saved = false
 
@@ -33,11 +32,12 @@ function Contact() {
       saved = false
     }
 
-    setStatus(saved
-      ? 'Message saved in this browser. Opening your email app…'
-      : 'Could not save locally. Opening your email app…')
-
-    window.location.href = `mailto:darshilparekh956@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    if (saved) {
+      setStatus('Your response has been saved.')
+      event.currentTarget.reset()
+    } else {
+      setStatus('Could not save your response. Please try again.')
+    }
   }
 
   return (

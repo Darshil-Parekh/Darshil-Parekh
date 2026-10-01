@@ -547,9 +547,18 @@ body::before {
   transition: transform 350ms ease, filter 350ms ease;
 }
 
+.project-preview .project-preview-image--contain {
+  padding: 20px;
+  object-fit: contain;
+}
+
 .project-card:hover .project-preview img {
   transform: scale(1.035);
   filter: saturate(1.08);
+}
+
+.project-card:hover .project-preview .project-preview-image--contain {
+  transform: none;
 }
 
 .preview-open {

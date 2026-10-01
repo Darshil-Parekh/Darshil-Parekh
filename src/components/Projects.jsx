@@ -24,6 +24,7 @@ const projects = [
 		description: 'A patient-focused healthcare experience presenting medical services, care teams, packages, and appointment options.',
 		technologies: ['HTML', 'CSS', 'JavaScript'],
 		url: 'https://darshil-parekh.github.io/Medinova/',
+		image: 'https://darshil-parekh.github.io/Medinova/images/about.jpg',
 	},
 	{
 		number: '04',
@@ -32,6 +33,8 @@ const projects = [
 		description: 'A fleet and booking website for bus and tempo traveller hire, helping groups compare vehicles and request a quote.',
 		technologies: ['HTML', 'CSS', 'TypeScript'],
 		url: 'https://darshil-parekh.github.io/Parth-Travels/',
+		image: 'https://darshil-parekh.github.io/Parth-Travels/images/9954.jpeg',
+		imageFit: 'contain',
 	},
 	{
 		number: '05',
@@ -40,6 +43,8 @@ const projects = [
 		description: 'A personal portfolio presenting selected work, development skills, and a clear way to get in touch.',
 		technologies: ['HTML', 'CSS', 'JavaScript'],
 		url: 'https://darshil-parekh.github.io/MY_PORTFOLIO/',
+		image: 'https://darshil-parekh.github.io/MY_PORTFOLIO/images/logo.png',
+		imageFit: 'contain',
 	},
 	{
 		number: '06',
@@ -48,6 +53,7 @@ const projects = [
 		description: 'A refined storefront for watches and fragrances, with curated collections, product details, and a shopping cart.',
 		technologies: ['HTML', 'CSS', 'JavaScript'],
 		url: 'https://darshil-parekh.github.io/E-Commerce/',
+		image: 'https://darshil-parekh.github.io/E-Commerce/Images/chainwatch.png',
 	},
 ]
 
@@ -74,7 +80,8 @@ function Projects() {
 							aria-label={`Open ${project.name} project`}
 						>
 							<img
-								src={`https://image.thum.io/get/width/1200/crop/720/noanimate/${project.url}`}
+								className={project.imageFit === 'contain' ? 'project-preview-image project-preview-image--contain' : 'project-preview-image'}
+								src={project.image ?? `https://image.thum.io/get/width/1200/crop/720/noanimate/${project.url}`}
 								alt={`${project.name} website preview`}
 								loading="lazy"
 							/>

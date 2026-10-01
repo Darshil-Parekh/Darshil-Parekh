@@ -1,12 +1,11 @@
 import React from 'react'
-import profilePhoto from '../Images/profile.jpg'
 
 function About() {
   return (
     <section id='about' className='about-section'>
       <div className="about-content">
         <div className="about-photo">
-          <img src={profilePhoto} alt="Darshil Parekh" />
+          <img src="https://darshil-parekh.github.io/MY_PORTFOLIO/images/myphoto.png" alt="Darshil Parekh" />
         </div>
         <div className="about-copy">
           <h2>About me</h2>

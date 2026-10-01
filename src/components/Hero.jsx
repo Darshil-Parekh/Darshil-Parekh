@@ -10,7 +10,7 @@ function Hero() {
         <h1>
           Hello, I’m <span>Darshil Parekh.</span>
         </h1>
-        <h2>Frontend developer</h2>
+        <h2>Full Stack Developer</h2>
         <p className="hero-description">
           I build modern, responsive web experiences with React and JavaScript.
           Thoughtful details, clean code, and a little bit of personality in

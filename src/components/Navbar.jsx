@@ -1,10 +1,11 @@
 import React from 'react'
+import logoImage from '../Images/logo.png'
 
 function Navbar() {
   return (
     <nav className="site-nav" aria-label="Main navigation">
       <a className="logo" href="#home" aria-label="Darshil Parekh, home">
-        <span className="logo-mark">DP</span>
+        <img className="logo-image" src={logoImage} alt="" />
         <span className="logo-name">Darshil Parekh</span>
       </a>
       <div className="nav-links">

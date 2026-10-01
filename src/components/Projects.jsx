@@ -1,0 +1,106 @@
+import React from 'react'
+
+const projects = [
+	{
+		number: '01',
+		name: 'To-Do Tasks',
+		type: 'Productivity app',
+		description: 'A focused task manager for capturing work, setting priorities, and tracking pending or completed tasks at a glance.',
+		technologies: ['JavaScript', 'Task filters', 'Priority tracking'],
+		url: 'https://darshil-parekh.github.io/todo-tasks/',
+	},
+	{
+		number: '02',
+		name: 'WeatherNow',
+		type: 'Weather dashboard',
+		description: 'Search a city for current conditions and a five-day forecast, with location lookup and a Celsius/Fahrenheit switch.',
+		technologies: ['JavaScript', 'Weather API', 'Geolocation'],
+		url: 'https://darshil-parekh.github.io/Weather-Update-System-/',
+	},
+	{
+		number: '03',
+		name: 'Medinova',
+		type: 'Healthcare website',
+		description: 'A patient-focused healthcare experience presenting medical services, care teams, packages, and appointment options.',
+		technologies: ['HTML', 'CSS', 'JavaScript'],
+		url: 'https://darshil-parekh.github.io/Medinova/',
+	},
+	{
+		number: '04',
+		name: 'Parth Travels',
+		type: 'Travel & transport',
+		description: 'A fleet and booking website for bus and tempo traveller hire, helping groups compare vehicles and request a quote.',
+		technologies: ['HTML', 'CSS', 'TypeScript'],
+		url: 'https://darshil-parekh.github.io/Parth-Travels/',
+	},
+	{
+		number: '05',
+		name: 'Personal Portfolio',
+		type: 'Portfolio website',
+		description: 'A personal portfolio presenting selected work, development skills, and a clear way to get in touch.',
+		technologies: ['HTML', 'CSS', 'JavaScript'],
+		url: 'https://darshil-parekh.github.io/MY_PORTFOLIO/',
+	},
+	{
+		number: '06',
+		name: 'DARVÉ',
+		type: 'E-commerce storefront',
+		description: 'A refined storefront for watches and fragrances, with curated collections, product details, and a shopping cart.',
+		technologies: ['HTML', 'CSS', 'JavaScript'],
+		url: 'https://darshil-parekh.github.io/E-Commerce/',
+	},
+]
+
+function Projects() {
+	return (
+		<section id="projects" className="projects-section" aria-labelledby="projects-title">
+			<header className="projects-heading">
+				<div>
+					<p className="projects-eyebrow">03 / Selected work</p>
+					<h2 id="projects-title">Projects in <span>practice</span></h2>
+				</div>
+				<p className="projects-intro">
+					A selection of useful, responsive experiences built around real user needs, from everyday tools to service and commerce websites.
+				</p>
+			</header>
+			<div className="projects-grid">
+				{projects.map((project) => (
+					<article className="project-card" key={project.number}>
+						<a
+							className="project-preview"
+							href={project.url}
+							target="_blank"
+							rel="noreferrer"
+							aria-label={`Open ${project.name} project`}
+						>
+							<img
+								src={`https://image.thum.io/get/width/1200/crop/720/noanimate/${project.url}`}
+								alt={`${project.name} website preview`}
+								loading="lazy"
+							/>
+							<span className="preview-open" aria-hidden="true">↗</span>
+						</a>
+						<div className="project-info">
+							<div className="project-meta">
+								<span>{project.number} / 06</span>
+								<span>{project.type}</span>
+							</div>
+							<h3>{project.name}</h3>
+							<p>{project.description}</p>
+							<ul className="project-tech" aria-label={`${project.name} technologies`}>
+								{project.technologies.map((technology) => (
+									<li key={technology}>{technology}</li>
+								))}
+							</ul>
+							<a className="project-link" href={project.url} target="_blank" rel="noreferrer">
+								Visit project <span aria-hidden="true">↗</span>
+							</a>
+						</div>
+					</article>
+				))}
+			</div>
+		</section>
+	)
+}
+
+export default Projects

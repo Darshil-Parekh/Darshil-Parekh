@@ -236,6 +236,80 @@ body::before {
   font-size: 15px;
 }
 
+.about-section {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 96px, 1220px);
+  margin: 0 auto;
+  padding: 96px 0 112px;
+  border-top: 1px solid rgba(106, 176, 255, 0.2);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
+  align-items: start;
+  column-gap: 92px;
+  row-gap: 20px;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.about-content h1 {
+  grid-column: 1;
+  grid-row: 1 / span 4;
+  margin: 0;
+  color: #eaf5ff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.about-content h1::before {
+  display: block;
+  margin-bottom: 17px;
+  color: #6bdfff;
+  content: '01 / ABOUT';
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.about-content p {
+  grid-column: 2;
+  margin: 0;
+  padding-left: 20px;
+  border-left: 1px solid rgba(82, 221, 255, 0.36);
+  color: #a8bbd3;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.about-content button {
+  grid-column: 2;
+  justify-self: start;
+  min-height: 48px;
+  margin-top: 8px;
+  padding: 0 18px;
+  border: 1px solid rgba(105, 180, 255, 0.4);
+  border-radius: 3px;
+  background: rgba(8, 28, 52, 0.56);
+  color: #d8ecff;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+.about-content button:hover {
+  border-color: #52ddff;
+  background: rgba(22, 120, 232, 0.2);
+  box-shadow: 0 0 22px rgba(34, 143, 255, 0.16);
+}
+
 @keyframes rise-in {
   from {
     opacity: 0;
@@ -260,7 +334,8 @@ body::before {
 
 @media (max-width: 760px) {
   .site-nav,
-  .hero-section {
+  .hero-section,
+  .about-section {
     width: min(100% - 40px, 560px);
   }
 
@@ -300,6 +375,27 @@ body::before {
 
   .hero-location {
     margin-top: 32px;
+  }
+
+  .about-section {
+    padding: 68px 0 80px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+  }
+
+  .about-content h1,
+  .about-content p,
+  .about-content button {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .about-content h1 {
+    margin-bottom: 8px;
+    font-size: 40px;
   }
 
 }

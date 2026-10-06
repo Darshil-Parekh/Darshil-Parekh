@@ -141,6 +141,8 @@ body::before {
 }
 
 .hero-content h1 span {
+  display: block;
+  margin-top: 10px;
   color: #65c8ff;
   text-shadow: 0 0 32px rgba(48, 156, 255, 0.25);
 }

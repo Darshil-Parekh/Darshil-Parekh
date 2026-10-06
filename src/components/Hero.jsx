@@ -8,9 +8,9 @@ function Hero() {
           <span /> Available for opportunities
         </p>
         <h1>
-          Hello, I’m <span>Darshil Parekh.</span>
+          Hello, I’m <span>Darshil Parekh</span>
         </h1>
-        <h2>Full Stack Developer</h2>
+        <h2>Full Stack Developer • Ahmedabad, Gujarat, India</h2>
         <p className="hero-description">
           I build modern, responsive web experiences with React and JavaScript.
           Thoughtful details, clean code, and a little bit of personality in

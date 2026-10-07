@@ -38,13 +38,12 @@ const projects = [
 	},
 	{
 		number: '05',
-		name: 'Personal Portfolio',
-		type: 'Portfolio website',
-		description: 'A personal portfolio presenting selected work, development skills, and a clear way to get in touch.',
-		technologies: ['HTML', 'CSS', 'JavaScript'],
-		url: 'https://darshil-parekh.github.io/MY_PORTFOLIO/',
-		image: 'https://darshil-parekh.github.io/MY_PORTFOLIO/images/logo.png',
-		imageFit: 'contain',
+		name: 'Perfect Hair & Beauty Salon',
+		type: 'Hair & beauty salon',
+		description: 'A responsive salon website with personalized services and galleries, plus appointment requests sent directly through WhatsApp.',
+		technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+		url: 'https://perfect-hair-beauty-salon.vercel.app/',
+		image: '/perfect-hair-beauty-salon-hero.png',
 	},
 	{
 		number: '06',
@@ -99,9 +98,16 @@ function Projects() {
 									<li key={technology}>{technology}</li>
 								))}
 							</ul>
-							<a className="project-link" href={project.url} target="_blank" rel="noreferrer">
-								Visit project <span aria-hidden="true">↗</span>
-							</a>
+							<div className="project-actions">
+								<a className="project-link" href={project.url} target="_blank" rel="noreferrer">
+									Visit project <span aria-hidden="true">↗</span>
+								</a>
+								{project.repositoryUrl && (
+									<a className="project-link" href={project.repositoryUrl} target="_blank" rel="noreferrer">
+										View source <span aria-hidden="true">↗</span>
+									</a>
+								)}
+							</div>
 						</div>
 					</article>
 				))}

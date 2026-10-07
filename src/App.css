@@ -651,6 +651,12 @@ body::before {
   text-decoration: none;
 }
 
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
 .project-link span {
   transition: transform 160ms ease;
 }

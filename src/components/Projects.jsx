@@ -53,6 +53,7 @@ const projects = [
 		technologies: ['HTML', 'CSS', 'JavaScript'],
 		url: 'https://darshil-parekh.github.io/E-Commerce/',
 		image: 'https://darshil-parekh.github.io/E-Commerce/Images/chainwatch.png',
+		imageFit: 'contain',
 	},
 ]
 

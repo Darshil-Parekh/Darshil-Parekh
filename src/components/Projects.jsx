@@ -55,6 +55,14 @@ const projects = [
 		image: 'https://darshil-parekh.github.io/E-Commerce/Images/chainwatch.png',
 		imageFit: 'contain',
 	},
+	{
+		number: '07',
+		name: 'AntriCore',
+		type: 'IT services website',
+		description: 'A digital solutions website showcasing web and app development, software, marketing, and IT consulting services.',
+		technologies: ['Web design', 'Digital solutions', 'IT consulting'],
+		url: 'https://antricore1.vercel.app/',
+	},
 ]
 
 function Projects() {
@@ -89,7 +97,7 @@ function Projects() {
 						</a>
 						<div className="project-info">
 							<div className="project-meta">
-								<span>{project.number} / 06</span>
+								<span>{project.number} / {String(projects.length).padStart(2, '0')}</span>
 								<span>{project.type}</span>
 							</div>
 							<h3>{project.name}</h3>

@@ -1,0 +1,37 @@
+{
+  "name": "protfolio-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.0"
+  },
+  "description": "��#\u0000 \u0000D\u0000a\u0000r\u0000s\u0000h\u0000i\u0000l\u0000-\u0000P\u0000a\u0000r\u0000e\u0000k\u0000h\u0000\r\u0000 \u0000",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Darshil-Parekh/Darshil-Parekh.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Darshil-Parekh/Darshil-Parekh/issues"
+  },
+  "homepage": "https://github.com/Darshil-Parekh/Darshil-Parekh#readme"
+}
